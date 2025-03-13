@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                build "PES2UG22CS13_CCLAB"
+                build "PES2UG22CS213_CCLAB"
                 sh 'g++ main/hello.cpp -o output'
             }
         }
