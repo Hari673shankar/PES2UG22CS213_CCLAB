@@ -1,20 +1,12 @@
 pipeline {
-    agent any
-        
-        stage('Test') {
+    stages {
+        stage('Build') {
             steps {
-                sh './output'
+                build "PES2UG22CS213-CCLAB"
+                sh 'g++ main/hello.cpp -o output'
             }
         }
-        
-        stage('Deploy') {
-            steps {
-                echo 'deploy'
-            }
-        }
-    }
-    
-    post {
+
         failure {
             echo 'Pipeline failed'
         }
