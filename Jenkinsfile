@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    
-    stages {
-        stage('Build') {
-                sh 'g++ main/hello.cpp -o output'
-            }
-        }
         
         stage('Test') {
             steps {
